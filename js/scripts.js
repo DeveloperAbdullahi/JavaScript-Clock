@@ -91,4 +91,4 @@ function showDateTime() {
     showDate();
 }
 
-showDateTime();
+setInterval(showDateTime, 1000)
