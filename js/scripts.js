@@ -75,7 +75,7 @@ function showDateTime() {
         }
         
         y = dateTime.getFullYear();
-        console.log(y);
+      
 
         myDate.innerHTML = d + " " + m + " " + y;
 
