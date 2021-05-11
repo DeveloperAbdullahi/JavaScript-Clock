@@ -5,8 +5,61 @@
 }
 
 body {
+    background-color: rgb(90, 92, 197);
     .jumbotron {
+        border: 1px solid rgb(1, 24, 124);
         background: transparent;
+        color: rgb(1, 24, 124);
+        margin: auto 5rem;
+        #time {
+            color: #fff;
+            font: 2em monospace, sans-serif;
+        } 
+        #date {
+            color: #fff;
+            font: 1em monospace, sans-serif;
+        }
+        .m-auto {
+            #circle {
+                margin: auto;
+                height: 100px;
+                width: 100px;
+                border: 1px solid #fff;
+                border-radius: 40%;
+                animation: rotate 3.2s infinite;
+            }
+        }
     }
 
+}
+
+// animation parameters
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(72deg)
+    }
+    50% {
+        transform: rotate(144deg)
+    }
+    75% {
+        transform: rotate(216deg)
+    }
+    100% {
+        transform: rotate(288deg)
+    }
+    75% {
+        transform: rotate(216deg)
+    }
+    50% {
+        transform: rotate(144deg)
+    }
+    25% {
+        transform: rotate(72deg)
+    }
+    0% {
+        transform: rotate(0deg)
+    }
 }
