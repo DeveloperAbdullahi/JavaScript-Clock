@@ -10,7 +10,7 @@ function showDateTime() {
 
     function showTime() {
         // create variables to store hour,minutes,seconds
-        let h, m, s;
+        var h, m, s;
         h = dateTime.getHours();
         m = dateTime.getMinutes();
         s = dateTime.getSeconds();
@@ -18,7 +18,29 @@ function showDateTime() {
         //display time through html elements
         myTime.innerHTML = h + ':' + m + ':' + s;
 
+            // function for alarm features
+        btn.onclick = function() {
+        var hours, minutes, aOutput
+        hours = document.getElementById('hours').value;
+        minutes = document.getElementById('minutes').value;
+        console.log('The alarm has been set for ' + hours + ':' + minutes);
+        aOutput = document.getElementById('alarmOutput');
+        aOutput.innerHTML = 'The alarm has been set for ' + hours + ':' + minutes;
+    
+       
+    
+    }
+    var alarmTime = hours.value + " " + minutes.value;
+    var realTime = h + " " + m;
 
+    console.log(alarmTime + " " + realTime);
+
+    // if (alarmTime /= realTime) {
+    //     skip
+    // } else if (alarmTime = realTime) {
+    //     alert("ALARM!!!!!")
+    // }
+ 
     }
 
     function showDate() {
@@ -76,8 +98,9 @@ function showDateTime() {
         
         y = dateTime.getFullYear();
       
+        // Displaythe full date
 
-        myDate.innerHTML = d + " " + m + " " + y;
+        myDate.innerHTML = sd + " " + d + " " + m + " " + y;
 
         
     
@@ -89,6 +112,12 @@ function showDateTime() {
 
     showTime();
     showDate();
+    
+
+
+
 }
+
+
 
 setInterval(showDateTime, 1000)
